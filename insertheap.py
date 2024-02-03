@@ -84,12 +84,22 @@ def build_heap(arr):
 def insert_into_heap(arr, val):
     arr.append(val)
     heapify_up(arr, len(arr) - 1)
+    
+    
+    # find kth smallest element from heap_maxify ......from heap min we can get kth largest
+def delete_k_elements(arr, k):
+    for _ in range(k):
+        delete_max(arr)
 
 # Example usage:
 l1 = [2, 54, 6, 78, 43, 32]
 build_heap(l1)
-insert_into_heap(l1, 100)
 print(l1)
+k=3
+delete_k_elements(l1,k)
+print(l1[0])
+# insert_into_heap(l1, 100)
+# print(l1)
 
 
 
