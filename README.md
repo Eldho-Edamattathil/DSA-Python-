@@ -1,5 +1,5 @@
-some common practice to refer
-example
+#some common practice to refer
+#example
 num = 9996
 
 s = [int(digit) for digit in str(num)]
