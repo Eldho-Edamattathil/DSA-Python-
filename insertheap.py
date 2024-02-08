@@ -92,7 +92,7 @@ def delete_k_elements(arr, k):
         delete_max(arr)
 
 # Example usage:
-l1 = [2, 54, 6, 78, 43, 32]
+l1 = [2, 54, 6, 78, 43, 32,12,45,677,88,54,27]
 build_heap(l1)
 print(l1)
 k=3

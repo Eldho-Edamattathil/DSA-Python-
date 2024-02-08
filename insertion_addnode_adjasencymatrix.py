@@ -37,6 +37,18 @@ def del_node(v):
     graph.pop(index)
     for i in graph:
       i.pop(index)
+
+def del_edge(v1,v2):
+  if v1 not in nodes:
+    print(v1,"not present in nodes")
+  elif v2 not in nodes:
+    print(v2,"not present in nodes")
+  else:
+    index1=nodes.index(v1)
+    index2=nodes.index(v2)
+    graph[index1][index2]=0
+    graph[index2][index1]=0
+    
     
 def print_graph():
   for i in range(node_count):
@@ -55,10 +67,12 @@ add_node("A")
 add_node("B")
 add_node("C")
 add_edge("A","B",10)
+add_edge("C","B",10)
 
 
 
 print("after adding nodes")
 print(nodes)
-del_node("A")
+del_edge("A","B")
+
 print_graph()
